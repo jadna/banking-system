@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/topup', 'HomeController@topup');
+Route::post('/home/topup-post', 'HomeController@topupsave');
+
+Route::get('/home/withdraw', 'HomeController@withdraw');
+Route::post('/home/withdraw-post', 'HomeController@withdrawsave');
+
+Route::get('/home/transfer', 'HomeController@transfer');
+Route::post('/home/transfer-post', 'HomeController@transfersave'); 
