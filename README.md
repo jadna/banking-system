@@ -10,7 +10,7 @@ Banking Application System Prototype with Laravel
 
 ### Installation
 
-- Access project directory on your terminal.
+- Access project directory on your terminal
 
       composer install
 
