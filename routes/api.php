@@ -13,6 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::apiResource('users', 'api/http/HomeController');
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/topup', 'HomeController@topup');
+Route::post('/home/topup-post', 'HomeController@topupsave');
+
+Route::get('/home/withdraw', 'HomeController@withdraw');
+Route::post('/home/withdraw-post', 'HomeController@withdrawsave');
+
+Route::get('/home/transfer', 'HomeController@transfer');
+Route::post('/home/transfer-post', 'HomeController@transfersave'); 
